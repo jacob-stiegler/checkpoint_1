@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic HTML Outline</title>
     <link href="css/semantic.css" rel="stylesheet">
+    <nav>
+        <h2 class="sr-only">Home Navigation</h2>
+        <a href="index.html">Home</a>
+    </nav>
 </head>
 <body>
-
+<div class="container">
+    <aside>
+        <nav>
+            <h2 class="sr-only" >Main Navigation</h2>
+            <ul>
+                <li><a href="#etymology">Etymology</a></li>
+                <li><a href="#before-the-launch">Before the launch</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#launch-and-mission">Launch and mission</a></li>
+                <li><a href="#reception">Reception</a></li>
+                <li><a href="#legacy">Legacy</a></li>
+                <li><a href="#surviving-examples">Surviving examples</a></li>
+            </ul>
+        </nav>
+    </aside>
     <header>
-        <a href="index.html">Home</a>
         <h1>Sputnik 1</h1>
-            <nav>
-                <h2 class="sr-only" >Main Navigation</h2>
-                <ul>
-                    <li><a href="#etymology">Etymology</a></li>
-                    <li><a href="#before-the-launch">Before the launch</a></li>
-                    <li><a href="#design">Design</a></li>
-                    <li><a href="#launch-and-mission">Launch and mission</a></li>
-                    <li><a href="#reception">Reception</a></li>
-                    <li><a href="#legacy">Legacy</a></li>
-                    <li><a href="#surviving-examples">Surviving examples</a></li>
-                </ul>
-            </nav>
             <p>Sputnik 1 (/ˈspʌtnɪk, ˈspʊtnɪk/, Russian: Спутник-1, Satellite 1), sometimes referred to as simply Sputnik, was the first artificial Earth satellite. It was launched into an elliptical low Earth orbit by the Soviet Union on 4 October 1957 as part of the Soviet space program. It sent a radio signal back to Earth for three weeks before its three silver-zinc batteries became depleted. Aerodynamic drag caused it to fall back into the atmosphere on 4 January 1958.</p>
             <figure>
                 <img src = "img/Sputnik_1.jpg" width="200" height="200" alt="Sputnik 1 hanging from the ceiling in front of a starry background">
@@ -197,7 +202,7 @@
         </section>
 
     </main>
-
+</div>
 </body>
 
 </html>

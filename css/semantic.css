@@ -1,15 +1,76 @@
-/* body{
-    background-color: yellow;
-} */
+  @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  body{
+      background-color: #FFE9C8      ;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+  }
+  
+  .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+  }
+  
+  .container {
+      margin: 0 auto;
+      max-width: 960px;
+  }
+  
+  h1,
+  h2,
+  h3 {
+      font-family: "Domine", serif;
+  }
+  
+  h1 {
+      font-size: 1.8em;
+      font-family: "Domine", serif;
+  }
+  
+  h2 {
+      font-size: 1.4em;
+      font-family: "Domine", serif;
+  }
+  
+  p {
+      line-height: 1.85em;
+      text-indent: 50px;
+      margin-bottom: 25px;
+  }
+  
+  nav ul li {
+      list-style: none;
+  }
+  
+  nav ul li a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      font-size: 1.2em;
+  }
+  
+  nav ul li a:link{
+      color: blue;
+  }
+  
+  nav ul li a:visited{
+      color: purple;
+  }
+  
+  nav ul li a:hover{
+      color: black;
+      background: white;
+  }
+  
+  nav ul li a:active{
+      color: red;
   }
