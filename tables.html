@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forms</title>
+    <link href="css/tables.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <a class="skip-link" href="#maincontent">Skip to main content</a>
+    <header>
+        <a href="index.html"><span aria-hidden="true" class="material-symbols-outlined">home</span>Home</a></li>
+        <h1>Tables and Forms</h1>
+        <time datetime="2025-10-27">October 27, 2025</time>
+    </header>
+    <nav>
+        <h2 class="sr-only" >Main Navigation</h2>
+        <ul class="no-bullets">
+            <li><a href="#about"><span aria-hidden="true" class="material-symbols-outlined">info</span>About</a></li>
+            <li><a href="#table"><span aria-hidden="true" class="material-symbols-outlined">elevation</span>Mountains</a></li>
+            <li><a href="#myform"><span aria-hidden="true" class="material-symbols-outlined">contact_page</span>Form</a></li>
+        </ul>
+    </nav>
+    <main id="maincontent">
+        <section id="about">
+            <h2>About The Mountains</h2>
+            <p>Welcome! This page features a table of the five tallest mountains in the world and a quick contact form where you can share your favorite.</p>
+        </section>
+        <section>
+            <h2>Mountain Information Table</h2>
+            <table id="table">
+                <caption>5 Tallest Mountains</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Elavation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mount Everest</td>
+                        <td>29,032 ft</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>K2</td>
+                        <td>28,251 ft</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kangchenjunga</td>
+                        <td>28,169 ft</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Lohtse</td>
+                        <td>27,940 ft</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Makalu</td>
+                        <td>27,838 ft</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Contact Form</h2>
+            <form id="myform"  action="#" method="post">
+                <fieldset>
+                    <legend>Tell us about your favorite mountain</legend>
+    
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" autocomplete="name" placeholder="Name" required>
+    
+                    <label for="your-email">Email</label>
+                    <input type="email" id="your-email" autocomplete="email" placeholder="Email" required>
+    
+                    <label for="message">Message</label>
+                    <input type="text" id="message" autocomplete="off" placeholder="Message" required>
+    
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <a href= "#">jast5595@colorado.edu</a>
+        </address>
+        <small>&copy; 2025</small>
+    </footer>
+</div>
+</body>
+</html>
