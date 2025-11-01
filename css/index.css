@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*:before,
+*:after{ 
+    /** 
+    css reset says every element/everything before every element/everything after every element
+    this is the hammer version, look up normalize.css for "scapel"
+    */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #a3a4a3    ;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color:#6C5217;
+}
+
+h1,
+h2,
+h3 {
+      font-family: "Domine", serif;
+}
+
+.skip-link {
+    background: black;
+    color: white;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+.skip-link {
+    transition: transform 0.3s;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.no-bullets{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container{
+    background-color: #e7e8e7;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5px;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:  
+    1fr     2fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: 
+    "heady     navvy"
+    "mainy    mainy"
+    "mainy    mainy"
+    "footy     footy";
+}
+
+header {grid-area: heady;}
+nav {grid-area: navvy; display:flex; justify-content: right;}
+main {grid-area: mainy; max-height: 100%;}
+footer {display:flex; grid-area: footy; align-items: center; justify-content: center;}
+
+.bio{
+    max-width: 955px;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+    height: 25%;
+    grid-template-columns:  
+    1fr     1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "biography      picture";
+}
+
+.picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.picture img {
+    height: 450px; /* adjust as needed */
+    width: auto;
+}
+  
+
+.biography{
+    grid-area: biography;
+    display:flex;
+}
