@@ -119,3 +119,40 @@ footer {display:flex; grid-area: footy; align-items: center; justify-content: ce
     grid-area: biography;
     display:flex;
 }
+
+@media screen
+    and (max-width: 640px) {
+    .container{
+        grid-template-columns:
+        1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+        "heady"
+        "navvy"
+        "mainy"
+        "mainy"
+        "footy";
+    }
+
+    .bio {
+        max-width: none;  /* remove the 955px limit */
+        width: 100vw;     /* let it span the full viewport */
+        grid-template-columns: 1fr; /* just one column now */
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "picture"
+          "biography";
+      }
+      
+
+    nav {
+        max-height: 10vh;
+        justify-content: center;
+    }
+
+    .picture img {
+        height: auto;
+        width: 50vw;
+    }
+    
+}
