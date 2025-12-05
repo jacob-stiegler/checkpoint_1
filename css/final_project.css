@@ -142,3 +142,81 @@
         }
     }
     
+    .section-body section + section {
+        margin-top: 1.25rem;
+      }
+      
+      .section-body h3 {
+        font-family: "Domine", serif;
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+        color: #0a2a43;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+      }
+      
+      thead th {
+        background-color: #0a2a43;   /* matches your site header/nav color */
+        color: white;
+        font-weight: 600;
+        text-align: left;
+        padding: 12px;
+      }
+      
+      tbody th {
+        font-weight: 600;
+        padding: 10px 12px;
+        vertical-align: top;
+        background-color: #eef2f6;
+        border-right: 2px solid #d1d9e0;
+      }
+      
+      tbody td {
+        padding: 10px 12px;
+        line-height: 1.5;
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: #f7f9fb;
+      }
+      
+      tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      
+      table, th, td {
+        border: 1px solid #d1d9e0;
+      }
+      
+      /* Keep table responsive on narrower screens */
+      @media (max-width: 650px) {
+        table {
+          font-size: 0.9rem;
+        }
+        tbody th, tbody td {
+          padding: 8px;
+        }
+      }
+      
+      
+      .content-section ul {
+        padding-left: 1.5rem;  
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+      }
+      
+      .content-section ul li {
+        margin-bottom: 0.35rem; 
+        line-height: 1.45;
+      }
+      
+     
+      .content-section ul li::marker {
+        color: #0a2a43;
+        font-size: 1rem;
+      }

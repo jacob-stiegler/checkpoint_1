@@ -1,158 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Base layout */
 
 *,
-*:before,
-*:after{ 
-    /** 
-    css reset says every element/everything before every element/everything after every element
-    this is the hammer version, look up normalize.css for "scapel"
-    */
+*::before,
+*::after {
     box-sizing: border-box;
-    padding: 0;
+}
+
+body {
     margin: 0;
-}
-
-body{
-    background-color: #a3a4a3    ;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 16px;
-    color:#6C5217;
+    line-height: 1.5;
+    background-color: #9ca3af;       /* soft grey background */
+    color: #111827;
 }
 
-h1,
-h2,
-h3 {
-      font-family: "Domine", serif;
+.page-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.75rem 1.25rem 2.5rem;
 }
+
+/* Skip link */
 
 .skip-link {
-    background: black;
-    color: white;
-    font-weight: 700;
-    padding: 4px;
     position: absolute;
-    transform: translateY(-200%);
+    left: -999px;
+    top: 0;
+    padding: 0.5rem 1rem;
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1000;
 }
 
 .skip-link:focus {
-    transform: translateY(0%);
+    left: 0.75rem;
+    top: 0.75rem;
 }
 
-.skip-link {
-    transition: transform 0.3s;
-}
+/* Screen-reader-only text */
 
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    width: 1px;
     height: 1px;
+    padding: 0;
     margin: -1px;
     overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-.no-bullets{
-    list-style-type: none;
-    padding-left: 0;
+/* Utility list */
+
+.no-bullets {
+    list-style: none;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    padding: 0;
 }
 
-.container{
-    background-color: #e7e8e7;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 5px;
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns:  
-    1fr     2fr;
-    grid-template-rows: auto 1fr 1fr auto;
-    grid-template-areas: 
-    "heady     navvy"
-    "mainy    mainy"
-    "mainy    mainy"
-    "footy     footy";
-}
+/* Header and nav */
 
-header {grid-area: heady;}
-nav {grid-area: navvy; display:flex; justify-content: right;}
-main {grid-area: mainy; max-height: 100%;}
-footer {display:flex; grid-area: footy; align-items: center; justify-content: center;}
-
-.bio{
-    max-width: 955px;
-    margin: 0 auto;
-    display: grid;
-    width: 100%;
-    height: 25%;
-    grid-template-columns:  
-    1fr     1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "biography      picture";
-}
-
-.picture {
-    grid-area: picture;
+.site-header {
+    background-color: #0b2536;
+    color: #f9fafb;
+    padding: 0.85rem 1.25rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  
-.picture img {
-    height: 450px; /* adjust as needed */
-    width: auto;
-}
-  
-
-.biography{
-    grid-area: biography;
-    display:flex;
+    justify-content: space-between;
 }
 
-@media screen
-    and (max-width: 640px) {
-    .container{
-        grid-template-columns:
-        1fr;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-areas: 
-        "heady"
-        "navvy"
-        "mainy"
-        "mainy"
-        "footy";
+.header-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.student-name {
+    margin: 0.15rem 0 0;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: #1f2933;
+    border-color: #e5e7eb;
+}
+
+/* Intro section */
+
+.intro {
+    margin-top: 1.75rem;
+    margin-bottom: 1.5rem;
+    background-color: #f9fafb;
+    padding: 1.2rem 1.4rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.15);
+}
+
+/* Card layout for about + projects */
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 1.25rem 1.4rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+}
+
+.about-me p + p {
+    margin-top: 0.7rem;
+}
+
+.projects p {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.projects ul {
+    padding-left: 1.25rem;   /* indent bullets */
+}
+
+.projects li {
+    margin-bottom: 0.35rem;
+}
+
+/* Footer */
+
+.site-footer {
+    max-width: 960px;
+    margin: 0.75rem auto 1.25rem;
+    padding: 0 1.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+/* Photo card styling */
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 12px;
+    margin-top: 0.75rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.22);
+    object-fit: cover;
+}
+
+
+/* Responsive */
+
+@media (max-width: 720px) {
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
     }
 
-    .bio {
-        max-width: none;  /* remove the 955px limit */
-        width: 100vw;     /* let it span the full viewport */
-        grid-template-columns: 1fr; /* just one column now */
-        grid-template-rows: auto auto;
-        grid-template-areas:
-          "picture"
-          "biography";
-      }
-      
-
-    nav {
-        max-height: 10vh;
-        justify-content: center;
+    .layout-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .picture img {
-        height: auto;
-        width: 50vw;
+    .page-main {
+        padding-top: 1.25rem;
     }
-    
 }

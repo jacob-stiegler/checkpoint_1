@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Achieve Universal Design</title>
+  <link href="css/final_project.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+  <a class="skip-link" href="#maincontent">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>How to Achieve Universal Design</h1>
+  </header>
+
+  <nav class="site-nav">
+    <h2 class="sr-only">Main navigation</h2>
+    <ul class="no-bullets">
+      <li><a href="final_project.html">Home</a></li>
+      <li><a href="what_final.html">What</a></li>
+      <li><a href="why_final.html">Why</a></li>
+      <li><a href="how_final.html" aria-current="page">How</a></li>
+    </ul>
+  </nav>
+
+  <main id="maincontent">
+    <section class="content-section">
+      <h2 class="section-heading">Putting Universal Design into Practice</h2>
+      <div class="section-body">
+
+        <section title="Overview">
+          <h2 class="sr-only">Techniques for Universal Design</h2>
+          <p>
+            Universal design on the web combines structure, visual design, flexibility,
+            and testing. The table below outlines several core techniques and what they
+            contribute to accessibility.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key Techniques</h3>
+          <table>
+            <caption class="sr-only">
+              Table describing major universal design techniques and their purpose.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Technique</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Semantic HTML</th>
+                <td>
+                  Use meaningful elements such as headings, lists, <code>&lt;nav&gt;</code>,
+                  <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> so browsers and
+                  assistive technologies can understand the structure of the page.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Responsive Layout</th>
+                <td>
+                  Design mobile-first and use flexible layouts (Grid and Flexbox) so content
+                  adjusts to different screen sizes without horizontal scrolling.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Color and Contrast</th>
+                <td>
+                  Choose text and background colors that meet contrast guidelines. This improves
+                  readability for people with low vision and helps in bright or low-light settings.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Keyboard Navigation</th>
+                <td>
+                  Ensure all interactive elements can be reached and activated with a keyboard.
+                  Users should be able to tab through links, buttons, and form controls in a
+                  logical order.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Accessible Forms and Tables</th>
+                <td>
+                  Give every form control a clear label, group related fields, and provide
+                  helpful error messages. Data tables should use headers that describe rows
+                  and columns so screen readers can announce context.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Testing with Tools</th>
+                <td>
+                  Use automated accessibility checkers, keyboard-only navigation, and at least
+                  one screen reader to find issues. Fixing these problems early leads to more
+                  robust, inclusive designs.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Working Together</h3>
+          <p>
+            These techniques reinforce each other. Semantic HTML supports assistive technologies,
+            responsive layouts support different devices, and good contrast and labeling ensure
+            that content is understandable and usable in many contexts.
+          </p>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; 2025 Jacob Stiegler</small>
+  </footer>
+</div>
+</body>
+</html>

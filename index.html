@@ -3,34 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Portal</title>
+    <title>Jacob Stiegler · Class Portal</title>
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <header class="heady">
-        <a class="skip-link" href="#maincontent">Skip to main content</a>
+<a class="skip-link" href="#maincontent">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-title">
         <h1>Class Portal</h1>
-    </header>
-    <nav class="navvy">
-        <h2 class="sr-only" >Main Navigation</h2>
+        <p class="student-name">Jacob Stiegler</p>
+    </div>
+
+    <nav class="main-nav" aria-label="Coding projects">
+        <h2 class="sr-only">Coding projects</h2>
         <ul class="no-bullets">
-            <li><a href="semantics.html">The Basics</a></li>
-            <li><a href="tables.html">Tables & Forms</a></li>
-            <li><a href="grid-flex.html">Grid & Flex</a></li>
-            <li><a href="final_project.html">Final Project</a></li>
+            <li>
+                <a href="semantics.html"
+                   title="Lab #2 - Coding &amp; Posting a Web Page - The Basics">
+                    Lab 2 · Basics
+                </a>
+            </li>
+            <li>
+                <a href="tables.html"
+                   title="Lab #3 - Tables, Forms, Tabbed Browsing, and Screen Reading">
+                    Lab 3 · Tables &amp; Forms
+                </a>
+            </li>
+            <li>
+                <a href="grid-flex.html"
+                   title="Lab #4 - Accessible CSS Layout">
+                    Lab 4 · CSS Layout
+                </a>
+            </li>
+            <li>
+                <a href="final_project.html"
+                   title="Final Project - Universal Design Website">
+                    Final · UD Site
+                </a>
+            </li>
         </ul>
     </nav>
-    <main id="maincontent">
-        <div class="bio">
-            <p class="biography">I am from Montana and enjoy spending time outdoors throughout the year. In the winter, I go snowboarding and spend time in the mountains. During the summer, I like to hike, camp, and explore different outdoor areas. I enjoy being active and spending time outside whenever I can. In my free time, I also listen to music, play video games, and relax with friends.</p>
-            <div class="picture">
-                <img src="img/me.jpg" alt="Photo of Jacob">
-            </div>
-        </div>
+</header>
 
-    </main>
-    <footer><small>&copy; 2025</small></footer>
-</div> 
+<main id="maincontent" class="page-main">
+    <section class="intro" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">Welcome</h2>
+        <p>
+            This portal collects my work for our web accessibility course.
+            From the first HTML page to the final universal design project,
+            each assignment focuses on building sites that are readable,
+            usable, and reachable for as many people as possible.
+        </p>
+    </section>
+
+    <section class="layout-grid" aria-label="About and photo">
+    
+        <!-- ABOUT ME -->
+        <section class="card about-me" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>
+                I am from Montana and spend a lot of time outdoors, especially in the mountains.
+                Snowboarding in the winter and hiking or camping in the summer are some of my
+                favorite things to do.
+            </p>
+            <p>
+                When I'm inside, I'm usually working on software projects, listening to music,
+                or gaming. I'm studying computer science and using this course to learn how to
+                write clean, accessible HTML and CSS that work well for everyone.
+            </p>
+        </section>
+    
+        <!-- PHOTO CARD -->
+        <section class="card photo-card" aria-labelledby="photo-heading">
+            <h2 id="photo-heading">My Photo</h2>
+    
+            <!-- Replace `images/me.jpg` with your actual filename -->
+            <img src="img/me.jpg"
+                 alt="Photo of Jacob Stiegler"
+                 class="profile-photo">
+        </section>
+    
+    </section>
+    
+    
+</main>
+
+<footer class="site-footer">
+    <small>&copy; 2025 Jacob Stiegler</small>
+</footer>
 </body>
 </html>
